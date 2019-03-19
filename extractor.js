@@ -39,7 +39,7 @@ const getPackages = async (groupIds) => {
             
             json.elements[0].elements.forEach(artifact => {
                 const artifactId = artifact.name
-                const version = artifact.attributes.versions.split(',').sort().slice(-1)[0]
+                const version = artifact.attributes.versions.split(',').slice(-1)[0]
                 
                 packages.push(`${groupId}:${artifactId}:$${version}`)
             })
